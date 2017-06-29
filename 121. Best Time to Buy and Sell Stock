@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        if(prices.empty())
+            return 0;
+        int minprice=prices[0];
+        int maxprofit=0;
+        for(int i=0; i<prices.size(); i++){
+            maxprofit=max(maxprofit,prices[i]-minprice);
+            minprice=min(minprice,prices[i]);
+        }
+        return maxprofit;
+    }
+};
+
+/*
+The points of interest are the peaks and valleys in the given graph. 
+We need to find the largest peak following the smallest valley. 
+We can maintain two variables - minprice and maxprofit corresponding to the smallest valley and maximum profit
+(maximum difference between selling price and minprice) obtained so far respectively.
+单序列动态规划的状态通常定义为：数组前 i 个位置, 数字, 字母 或者 以第i个为... 返回结果通常为数组的最后一个元素。
+按照动态规划的四要素，此类题可从以下四个角度分析。
+State: f[i] 前i个位置/数字/字母...
+Function: f[i] = f[i-1]... 找递推关系
+Initialization: 根据题意进行必要的初始化
+Answer: f[n-1]
+*/
