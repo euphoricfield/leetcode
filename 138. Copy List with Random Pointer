@@ -1,0 +1,78 @@
+//Core problem of this question is how to assign the random pointer
+//It is rather easy to copy all nodes into a new list.
+//So, to keep track of the thing, one approach is obviously hashmap
+//map[old]=new. Two loops will end.
+
+//A cleverer approach will be linking the new nodes after the old one. 
+//In this case, new random will be the next one of original random.
+
+/**
+ * Definition for singly-linked list with a random pointer.
+ * struct RandomListNode {
+ *     int label;
+ *     RandomListNode *next, *random;
+ *     RandomListNode(int x) : label(x), next(NULL), random(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    RandomListNode *copyRandomList(RandomListNode *head) {
+        if(head==nullptr)
+            return nullptr;
+        RandomListNode *dum=head, *res=head, *goal;
+        while(head!=nullptr){
+            RandomListNode *tmp = new RandomListNode(head->label);
+            tmp->random = head->random;
+            tmp->next = head->next;
+            head->next = tmp;
+            head = tmp->next;
+        }
+        
+        dum=dum->next;
+        while(dum!=nullptr){
+            if(dum->random!=nullptr)
+                dum->random = dum->random->next;
+            if(dum->next==nullptr)
+                break;
+            dum = dum->next->next;
+        }
+        
+        
+        RandomListNode dummy= RandomListNode(0);
+        goal = &dummy;
+        
+        while(res!=nullptr && res->next!=nullptr){
+            RandomListNode* tmp=res->next;
+            res->next = tmp->next;
+            tmp->next = res->next;
+            goal->next = tmp;
+            goal = tmp;
+            res=res->next;
+        }
+        return dummy.next;
+        
+    }
+};
+
+
+
+/*
+RandomListNode *copyRandomList(RandomListNode *head) {
+        if(head==nullptr)
+            return nullptr;
+        map<RandomListNode*, RandomListNode*> mymap;
+        RandomListNode *dummy = head, *result=head;
+        while(head!=nullptr){
+            RandomListNode *tmp = new RandomListNode(head->label);
+            mymap[head]=tmp;
+            head = head->next;
+        }
+        while(dummy!=nullptr){
+            RandomListNode *tmp = mymap[dummy];
+            tmp->next = mymap[dummy->next];
+            tmp->random = mymap[dummy->random];
+            dummy = dummy->next;
+        }
+        return mymap[result];
+    }
+*/
