@@ -15,3 +15,7 @@ http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=169418&extra=page%3
 http://www.1point3acres.com/bbs/thread-285324-1-1.html
 
 http://www.1point3acres.com/bbs/thread-282583-1-1.html
+
+http://ampcamp.berkeley.edu/big-data-mini-course/movie-recommendation-with-mllib.html#data-set
+
+https://yixuan.cos.name/cn/2015/04/spark-beginner-1/
