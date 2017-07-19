@@ -21,3 +21,5 @@ http://ampcamp.berkeley.edu/big-data-mini-course/movie-recommendation-with-mllib
 https://yixuan.cos.name/cn/2015/04/spark-beginner-1/
 
 http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=210924&extra=page%3D1%26filter%3Dsortid%26sortid%3D192%26sortid%3D192
+
+http://www.1point3acres.com/bbs/thread-187357-1-1.html
