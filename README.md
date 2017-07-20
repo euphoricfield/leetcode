@@ -23,3 +23,13 @@ https://yixuan.cos.name/cn/2015/04/spark-beginner-1/
 http://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=210924&extra=page%3D1%26filter%3Dsortid%26sortid%3D192%26sortid%3D192
 
 http://www.1point3acres.com/bbs/thread-187357-1-1.html
+
+http://blog.csdn.net/linhuanmars/article/details/20024837
+
+https://soulmachine.gitbooks.io/algorithm-essentials/content/cpp/binary-tree/traversal/binary-tree-zigzag-level-order-traversal.html
+
+https://pobenliu.gitbooks.io/leetcode/content/#3
+
+https://scyforce.gitbooks.io/leetcode/content/substring_with_concatenation_of_all_words.html
+
+http://blog.jerkybible.com/categories/LeetCode/page/2/
